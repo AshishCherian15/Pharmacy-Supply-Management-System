@@ -340,7 +340,7 @@ git push -u origin main
 [![GitHub](https://img.shields.io/badge/GitHub-AshishCherian15-181717?style=for-the-badge&logo=github)](https://github.com/AshishCherian15)
 
 *Originally a college DBMS Mini Project — 2024*
-*Upgraded & deployed to production — 2025*
+*Upgraded & deployed to production — 2026*
 *Flask · PostgreSQL · Neon · Vercel · Bootstrap · Chart.js*
 
 </div>
