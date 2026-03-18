@@ -17,11 +17,12 @@
   <img src="https://img.shields.io/badge/Charts-Chart.js-FF6384?style=flat-square&logo=chartdotjs"/>
   <img src="https://img.shields.io/badge/Deploy-Vercel-000000?style=flat-square&logo=vercel"/>
   <img src="https://img.shields.io/badge/Database-Neon-00E699?style=flat-square&logo=postgresql"/>
+  <img src="https://img.shields.io/badge/Updated-2025-6366f1?style=flat-square"/>
 </p>
 
 <br/>
 
-> **A production-ready Flask application for managing pharmacy supply chains — featuring dual roles, real-time analytics, order tracking, and complete audit logging.**
+> **Originally built as a college DBMS Mini Project in 2024 — recently upgraded to a production-ready, fully deployed web application with Vercel + Neon PostgreSQL.**
 
 <br/>
 
@@ -42,15 +43,26 @@
 - [🚀 Local Setup](#-local-setup)
 - [🌐 Deployment](#-deployment)
 - [🔐 Security](#-security)
+- [📸 Screenshots](#-screenshots)
 - [👨💻 Developer](#-developer)
 
 ---
 
 ## ✨ Overview
 
-The **Pharmacy Supply Management System** is a full-stack web application built with **Flask + SQLAlchemy** that streamlines the medicine and product supply workflow between a supplier (admin) and pharmacy stores (customers).
+The **Pharmacy Supply Management System** was originally built as a **college DBMS Mini Project in 2024** to demonstrate relational database concepts using Flask and SQLAlchemy.
 
-Built as a **DBMS Mini Project** and upgraded to a **portfolio-ready, deployable web application** — demonstrating role-based authentication, order lifecycle management, analytics dashboards, and database migrations.
+It has since been **significantly upgraded in 2025** into a portfolio-ready, fully deployed web application — now live on **Vercel** with a **Neon PostgreSQL** backend — demonstrating role-based authentication, order lifecycle management, real-time analytics dashboards, autocomplete-powered order forms, and complete audit logging.
+
+> 🔄 **What changed in the 2025 update:**
+> - Migrated from local SQLite to Neon serverless PostgreSQL
+> - Deployed live on Vercel (serverless)
+> - Added customer portal with self-registration
+> - Added Chart.js analytics dashboard
+> - Added autocomplete for medicines & products in order forms
+> - Added CSV export, print/PDF view, audit logs
+> - Complete UI overhaul with dark navy theme (Sora + Inter fonts)
+> - CSRF protection, session timeout, role-based guards
 
 ---
 
@@ -294,6 +306,22 @@ git push -u origin main
 
 ---
 
+## 📸 Screenshots
+
+### 🖥️ Admin Dashboard
+> Take a screenshot of your running app at `http://localhost:5000/dashboard` and save it as `static/img/screenshot-dashboard.png`, then it will appear here automatically.
+
+![Admin Dashboard](static/img/screenshot-dashboard.png)
+
+> **To add your screenshot:**
+> 1. Run the app locally — `python run.py`
+> 2. Login as admin at `http://localhost:5000/login`
+> 3. Press `F12` → take a screenshot or use Windows `Win + Shift + S`
+> 4. Save as `static/img/screenshot-dashboard.png`
+> 5. `git add . && git commit -m "add screenshot" && git push`
+
+---
+
 ## 👨💻 Developer
 
 <div align="center">
@@ -302,7 +330,8 @@ git push -u origin main
 
 [![GitHub](https://img.shields.io/badge/GitHub-AshishCherian15-181717?style=for-the-badge&logo=github)](https://github.com/AshishCherian15)
 
-*DBMS Mini Project — 2026*
+*Originally a college DBMS Mini Project — 2024*
+*Upgraded & deployed to production — 2025*
 *Flask · PostgreSQL · Neon · Vercel · Bootstrap · Chart.js*
 
 </div>
