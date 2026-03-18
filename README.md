@@ -26,7 +26,14 @@
 
 <br/>
 
-[🚀 Live Demo](#) · [📖 Setup Guide](#-local-setup) · [🛠️ Features](#-features) · [🌐 Deploy](#-deployment)
+[🚀 Live Demo](https://pharmacy-supply-management-system.vercel.app) · [📖 Setup Guide](#-local-setup) · [🛠️ Features](#-features) · [🌐 Deploy](#-deployment)
+
+### 🔑 Quick Demo Access
+
+| Role | Username / Email | Password |
+|---|---|---|
+| **Admin** | `owner` | `ChangeMe@123` |
+| **Customer** | `customer@example.com` | `Customer@123` |
 
 </div>
 
@@ -251,6 +258,8 @@ Open **http://localhost:5000**
 |---|---|---|
 | **Admin** | `owner` | `ChangeMe@123` |
 | **Customer** | `customer@example.com` | `Customer@123` |
+
+> 💡 These credentials work on the live demo too — feel free to explore!
 
 ---
 
