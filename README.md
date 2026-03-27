@@ -1,216 +1,164 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0f3460&height=200&section=header&text=Pharmacy%20Supply%20Management&fontSize=36&fontColor=ffffff&fontAlignY=38&desc=A%20Full-Stack%20Flask%20Web%20Application&descAlignY=58&descSize=18&animation=fadeIn" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0f3460&height=200&section=header&text=Pharmacy%20Supply%20Management%20System&fontSize=34&fontColor=ffffff&fontAlignY=38&desc=Production-ready%20Flask%20Application%20for%20Pharmacy%20Operations&descAlignY=58&descSize=16&animation=fadeIn" width="100%"/>
 
 <p>
   <img src="https://img.shields.io/badge/Python-3.13-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
   <img src="https://img.shields.io/badge/Flask-3.1.0-000000?style=for-the-badge&logo=flask&logoColor=white"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-Neon-336791?style=for-the-badge&logo=postgresql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Bootstrap-5.3-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"/>
-  <img src="https://img.shields.io/badge/SQLAlchemy-2.0-CC2927?style=for-the-badge&logo=databricks&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Database-Neon%20PostgreSQL-336791?style=for-the-badge&logo=postgresql&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Frontend-Jinja2%20%2B%20Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Hosting-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
 </p>
 
 <p>
   <img src="https://img.shields.io/badge/Status-Active-10b981?style=flat-square"/>
-  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square"/>
-  <img src="https://img.shields.io/badge/Role-Admin%20%2B%20Customer-orange?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Auth-Admin%20%2B%20Customer-orange?style=flat-square"/>
+  <img src="https://img.shields.io/badge/ORM-SQLAlchemy-CC2927?style=flat-square"/>
   <img src="https://img.shields.io/badge/Charts-Chart.js-FF6384?style=flat-square&logo=chartdotjs"/>
-  <img src="https://img.shields.io/badge/Deploy-Vercel-000000?style=flat-square&logo=vercel"/>
-  <img src="https://img.shields.io/badge/Database-Neon-00E699?style=flat-square&logo=postgresql"/>
-  <img src="https://img.shields.io/badge/Updated-2025-6366f1?style=flat-square"/>
+  <img src="https://img.shields.io/badge/License-MIT-blue?style=flat-square"/>
 </p>
 
-<br/>
-
-> **Originally built as a college DBMS Mini Project in 2024 — recently upgraded to a production-ready, fully deployed web application with Vercel + Neon PostgreSQL.**
-
-<br/>
-
-[🚀 Live Demo](https://pharmacy-supply-management-system.vercel.app) · [📖 Setup Guide](#-local-setup) · [🛠️ Features](#-features) · [🌐 Deploy](#-deployment)
-
-### 🔑 Quick Demo Access
-
-| Role | Username / Email | Password |
-|---|---|---|
-| **Admin** | `owner` | `ChangeMe@123` |
-| **Customer** | `customer@example.com` | `Customer@123` |
+[Live Demo](https://pharmacy-supply-management-system.vercel.app) · [Local Setup](#local-setup) · [Feature Showcase](#feature-showcase) · [Deployment](#deployment)
 
 </div>
 
 ---
 
-## 📋 Table of Contents
+## Demo Credentials
 
-- [✨ Overview](#-overview)
-- [🎯 Features](#-features)
-- [🏗️ Project Structure](#️-project-structure)
-- [🛠️ Tech Stack](#️-tech-stack)
-- [👥 User Roles](#-user-roles)
-- [🗄️ Database Schema](#️-database-schema)
-- [🚀 Local Setup](#-local-setup)
-- [🌐 Deployment](#-deployment)
-- [🔐 Security](#-security)
-- [📸 Screenshots](#-screenshots)
-- [👨💻 Developer](#-developer)
+Use these credentials for quick testing locally and on deployed app:
+
+| Role | Login Route | Username or Email | Password |
+|---|---|---|---|
+| Admin | /login | owner | ChangeMe@123 |
+| Customer | /customer/login | customer@example.com | Customer@123 |
 
 ---
 
-## ✨ Overview
+## Overview
 
-The **Pharmacy Supply Management System** was originally built as a **college DBMS Mini Project in 2024** to demonstrate relational database concepts using Flask and SQLAlchemy.
+Pharmacy Supply Management System is a full-stack Flask web app designed to manage daily pharmacy supply operations with role-based access.
 
-It has since been **significantly upgraded in 2025** into a portfolio-ready, fully deployed web application — now live on **Vercel** with a **Neon PostgreSQL** backend — demonstrating role-based authentication, order lifecycle management, real-time analytics dashboards, autocomplete-powered order forms, and complete audit logging.
+The project started as a DBMS mini-project and has been upgraded into a deployment-ready product with:
 
-> 🔄 **What changed in the 2025 update:**
-> - Migrated from local SQLite to Neon serverless PostgreSQL
-> - Deployed live on Vercel (serverless)
-> - Added customer portal with self-registration
-> - Added Chart.js analytics dashboard
-> - Added autocomplete for medicines & products in order forms
-> - Added CSV export, print/PDF view, audit logs
-> - Complete UI overhaul with dark navy theme (Sora + Inter fonts)
-> - CSRF protection, session timeout, role-based guards
+- Production database on Neon PostgreSQL
+- Serverless deployment on Vercel
+- Admin and Customer portals
+- Chart-driven analytics and reporting
+- CSV export, print-friendly order report, and audit logs
 
 ---
 
-## 🎯 Features
+## Feature Showcase
 
-### 🔑 Admin Features
-| Feature | Description |
-|---|---|
-| 📊 **Analytics Dashboard** | KPI stat cards + Chart.js donut and bar charts |
-| 🏪 **Pharmacy Management** | Full CRUD — register, edit, delete pharmacies |
-| 💊 **Order Management** | Place, view, filter, update status, delete orders |
-| 🔄 **Order Status Pipeline** | Pending → Approved → Delivered workflow |
-| 🔍 **Inventory Search** | Search medicines/products with partial match |
-| ➕ **Catalog Management** | Add and delete medicines/products from master list |
-| 📋 **Audit Logs** | Filterable logs with CSV export for every action |
-| 📈 **Reports Page** | Revenue analytics, top medicines, pharmacy breakdown |
-| 📤 **CSV Export** | Export orders and logs as downloadable CSV files |
-| 🖨️ **Print/PDF View** | Printable order report with branded layout |
+This section is inspired by professional pharmacy-system showcases, but all capabilities below are mapped to your current Flask stack.
 
-### 👤 Customer Features
-| Feature | Description |
-|---|---|
-| 📝 **Self Registration** | Customers register and login independently |
-| 🛒 **Browse Catalog** | Searchable medicine and product catalog with autocomplete |
-| 📦 **Place Orders** | Submit order requests with amount estimation |
-| 👁️ **Track Own Orders** | View only their own orders, with status badges |
-| ❌ **Cancel Orders** | Cancel any pending order before it's approved |
-| 📤 **CSV Export** | Export personal order history as CSV |
+### Admin Workspace
 
-### 🔒 Security Features
-- ✅ Password hashing with `werkzeug.security`
-- ✅ CSRF tokens on every form
-- ✅ Session timeout (30 min inactivity)
-- ✅ Role-based route protection (`@admin_required`, `@customer_required`)
-- ✅ Server-side input validation on all forms
-- ✅ SQLAlchemy ORM — no raw SQL queries
+| Module | What it does | Route |
+|---|---|---|
+| Dashboard | KPI cards + status and monthly charts | /dashboard |
+| Pharmacy Registry | Add/edit/delete pharmacy stores | /insert, /edit/{id} |
+| Order Management | Create orders, filter, status updates, delete | /medicines, /orders |
+| Inventory Catalog | Manage medicines and products | /items, /items2 |
+| Search | Fast search across catalog and records | /search |
+| Reports | Revenue and operational insights | /reports |
+| Logs | Auditable action history with export | /logs |
 
----
+### Customer Workspace
 
-## 🏗️ Project Structure
+| Module | What it does | Route |
+|---|---|---|
+| Registration/Login | Customer self-onboarding and access | /customer/register, /customer/login |
+| Catalog | Browse medicines/products with autocomplete support | /customer/catalog |
+| My Orders | Track status and cancel pending orders | /customer/orders |
+| CSV Export | Export customer order history | /customer/orders/export/csv |
 
-```
-pharmacy-supply-management/
-│
-├── api/
-│   └── index.py                  # Vercel serverless entry point
-│
-├── app/                          # Application package
-│   ├── __init__.py               # App factory (create_app)
-│   ├── models.py                 # SQLAlchemy models
-│   ├── utils.py                  # Helpers: decorators, validators, logger
-│   ├── main_routes.py            # Public routes
-│   ├── auth/routes.py            # Admin + customer auth
-│   ├── pharmacy/routes.py        # Dashboard, CRUD
-│   ├── orders/routes.py          # Order management
-│   ├── inventory/routes.py       # Catalog management
-│   ├── customer/routes.py        # Customer portal
-│   └── reports/routes.py        # Analytics
-│
-├── templates/                    # Jinja2 HTML templates
-├── static/                       # CSS + images
-│
-├── run.py                        # Local entry point
-├── vercel.json                   # Vercel deployment config
-├── requirements.txt              # Python dependencies
-├── Procfile                      # Gunicorn config
-└── .env.example                  # Environment variable template
-```
+### Security and Data Integrity
+
+- Password hashing via werkzeug.security
+- CSRF protection on POST forms
+- Role guards for admin/customer routes
+- Session timeout for inactive users
+- SQLAlchemy ORM usage (no raw SQL)
 
 ---
 
-## 🛠️ Tech Stack
+## Screenshots
+
+### Admin Dashboard
+
+![Admin Dashboard](static/img/screenshot-dashboard.png)
+
+### Recommended Showcase Captures
+
+To match a high-quality README showcase style, add screenshots for these pages:
+
+1. Admin Login
+2. Dashboard Analytics
+3. Add Pharmacy Form
+4. Place Order Form
+5. Orders Table with Status Controls
+6. Customer Catalog
+7. Customer My Orders
+8. Reports and Charts
+
+After adding screenshots under static/img, update this README with image markdown rows similar to the dashboard example.
+
+---
+
+## Tech Stack
 
 | Layer | Technology |
 |---|---|
-| **Backend** | Python 3.13, Flask 3.1 |
-| **ORM / Database** | Flask-SQLAlchemy, SQLAlchemy 2.0 |
-| **Production DB** | PostgreSQL via Neon (serverless) |
-| **Local DB** | SQLite (auto-fallback) |
-| **Security** | Werkzeug password hashing, CSRF tokens |
-| **Frontend** | Jinja2, Bootstrap 5.3, Font Awesome 6.5 |
-| **Charts** | Chart.js (doughnut + bar) |
-| **Hosting** | Vercel (serverless) |
-| **Config** | python-dotenv |
+| Backend | Python 3.13, Flask 3.1 |
+| Data Layer | Flask-SQLAlchemy, SQLAlchemy 2.0 |
+| Production DB | Neon PostgreSQL |
+| Local DB fallback | SQLite |
+| Frontend | Jinja2 templates, Bootstrap 5.3, Font Awesome |
+| Visualization | Chart.js |
+| Deployment | Vercel (serverless) |
+| Config | python-dotenv |
 
 ---
 
-## 👥 User Roles
+## Architecture and Modules
 
 ```
-┌─────────────────────────────────────────────────────────┐
-│                    ADMIN (Store Owner)                  │
-│  Dashboard · Pharmacies · Orders · Reports · Logs       │
-└─────────────────────────────────────────────────────────┘
-
-┌─────────────────────────────────────────────────────────┐
-│                   CUSTOMER (Pharmacy)                   │
-│  Register · Login · Catalog · My Orders · Cancel        │
-└─────────────────────────────────────────────────────────┘
-```
-
----
-
-## 🗄️ Database Schema
-
-```
-posts            medicines           addmp          addpd
-──────────       ─────────────────   ──────         ──────
-mid (PK)         id (PK)             sno (PK)       sno (PK)
-medical_name     mid (FK→posts)      medicine       product
-owner_name       name
-phone_no         medicines
-address          products
-                 email
-                 amount
-                 status
-                 created_at
-
-customers        customer_orders     logs
-──────────────   ───────────────     ──────────
-id (PK)          id (PK)             id (PK)
-full_name        customer_id (FK)    mid
-email (unique)   medicines           action
-password_hash    products            date
-created_at       amount
-                 status
-                 created_at
+Pharmacy-Supply-Management-System/
+├── api/
+│   └── index.py
+├── app/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── utils.py
+│   ├── main_routes.py
+│   ├── auth/routes.py
+│   ├── pharmacy/routes.py
+│   ├── orders/routes.py
+│   ├── inventory/routes.py
+│   ├── customer/routes.py
+│   └── reports/routes.py
+├── templates/
+├── static/
+├── run.py
+├── vercel.json
+├── requirements.txt
+└── .env.example
 ```
 
 ---
 
-## 🚀 Local Setup
+## Local Setup
 
-### 1. Clone the repository
+### 1. Clone
 
 ```bash
 git clone https://github.com/AshishCherian15/Pharmacy-Supply-Management-System.git
 cd Pharmacy-Supply-Management-System
 ```
 
-### 2. Create virtual environment
+### 2. Create environment
 
 ```bash
 # Windows
@@ -228,129 +176,81 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 4. Configure environment
-
-```bash
-cp .env.example .env
-```
-
-Edit `.env`:
+### 4. Configure .env
 
 ```env
 SECRET_KEY=your-random-secret-key
 ADMIN_USERNAME=owner
 ADMIN_PASSWORD=ChangeMe@123
 SEED_DATA=true
-# Leave DATABASE_URL blank for local SQLite
+# Keep DATABASE_URL blank to use local SQLite
 ```
 
-### 5. Run the application
+### 5. Run
 
 ```bash
 python run.py
 ```
 
-Open **http://localhost:5000**
-
-### Demo Credentials
-
-| Role | Username / Email | Password |
-|---|---|---|
-| **Admin** | `owner` | `ChangeMe@123` |
-| **Customer** | `customer@example.com` | `Customer@123` |
-
-> 💡 These credentials work on the live demo too — feel free to explore!
+Open http://localhost:5000
 
 ---
 
-## 🌐 Deployment
+## Deployment
 
-### Deploy to Vercel + Neon (Recommended — Free Forever)
+### Vercel + Neon
 
-#### Step 1 — Set up Neon Database
-1. Go to [neon.tech](https://neon.tech) → Sign up free
-2. Create a new project
-3. Copy the connection string from dashboard
-
-#### Step 2 — Push to GitHub
-```bash
-git init
-git add .
-git commit -m "initial commit"
-git branch -M main
-git remote add origin https://github.com/YOURUSERNAME/pharmacy-supply-management.git
-git push -u origin main
-```
-
-#### Step 3 — Deploy on Vercel
-1. Go to [vercel.com](https://vercel.com) → Sign up with GitHub
-2. Click **Add New Project** → import your GitHub repo
-3. Add these **Environment Variables**:
+1. Create Neon DB and copy connection string.
+2. Import repository in Vercel.
+3. Add environment variables:
 
 | Key | Value |
 |---|---|
-| `SECRET_KEY` | any-strong-random-string |
-| `ADMIN_USERNAME` | owner |
-| `ADMIN_PASSWORD` | YourPassword@123 |
-| `DATABASE_URL` | your Neon connection string |
-| `SEED_DATA` | true |
+| SECRET_KEY | strong-random-secret |
+| ADMIN_USERNAME | owner |
+| ADMIN_PASSWORD | your-secure-admin-password |
+| DATABASE_URL | Neon postgres URL |
+| SEED_DATA | true |
 
-4. Click **Deploy** ✅
-5. Your app is live at `https://your-project.vercel.app` 🎉
-
-> 💡 Every `git push` to `main` auto-redeploys on Vercel.
+4. Deploy and verify /api/health.
 
 ---
 
-## 🔐 Security
+## Similar Enterprise Features: Current vs Next
 
-| Measure | Implementation |
-|---|---|
-| Password Storage | `werkzeug.security.generate_password_hash` (PBKDF2-SHA256) |
-| CSRF Protection | Custom token in session, validated on every POST |
-| Session Timeout | Configurable inactivity timeout (default 30 min) |
-| Route Protection | `@admin_required` and `@customer_required` decorators |
-| Input Validation | Server-side checks on all forms |
-| SQL Injection | SQLAlchemy ORM — no raw SQL queries |
+To keep this project aligned with larger pharmacy management systems while staying on your current tech stack, here is the roadmap split clearly.
 
----
+### Implemented
 
-## 📸 Screenshots
+- Multi-role auth (Admin, Customer)
+- Pharmacy CRUD
+- Inventory catalog (medicines/products)
+- Order lifecycle (Pending, Approved, Delivered)
+- Analytics dashboard and reports
+- CSV export and printable order report
+- Audit logs
 
-### 🖥️ Admin Dashboard
-> Take a screenshot of your running app at `http://localhost:5000/dashboard` and save it as `static/img/screenshot-dashboard.png`, then it will appear here automatically.
+### Planned (Flask + SQLAlchemy compatible)
 
-![Admin Dashboard](static/img/screenshot-dashboard.png)
-
-> **To add your screenshot:**
-> 1. Run the app locally — `python run.py`
-> 2. Login as admin at `http://localhost:5000/login`
-> 3. Press `F12` → take a screenshot or use Windows `Win + Shift + S`
-> 4. Save as `static/img/screenshot-dashboard.png`
-> 5. `git add . && git commit -m "add screenshot" && git push`
+- Supplier management module
+- Expiry and low-stock alerts dashboard
+- Email notifications for critical inventory events
+- Purchase order workflow and approval trail
+- Barcode-ready stock identifiers
+- Enhanced settings page for business preferences
 
 ---
 
-## 👨💻 Developer
+## Developer
 
-<div align="center">
+Ashish Cherian
 
-**Ashish Cherian**
-
-[![GitHub](https://img.shields.io/badge/GitHub-AshishCherian15-181717?style=for-the-badge&logo=github)](https://github.com/AshishCherian15)
-
-*Originally a college DBMS Mini Project — 2024*
-*Upgraded & deployed to production — 2026*
-*Flask · PostgreSQL · Neon · Vercel · Bootstrap · Chart.js*
-
-</div>
+GitHub: https://github.com/AshishCherian15
 
 ---
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0f3460&height=100&section=footer&animation=fadeIn" width="100%"/>
-
-**⭐ If this project helped you, consider giving it a star!**
+Built with Flask, SQLAlchemy, Bootstrap, Neon PostgreSQL, and Vercel.
 
 </div>
