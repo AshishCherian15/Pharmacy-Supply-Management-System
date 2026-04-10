@@ -12,20 +12,38 @@
   <div class="row justify-content-center">
     <div class="col-lg-5">
       <div class="card p-4">
+        <div class="demo-panel mb-4">
+          <div class="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-2">
+            <div>
+              <p class="mb-0 fw-bold" style="font-size:0.82rem;color:var(--stitch-primary);">Demo Credentials</p>
+              <p class="mb-0 text-muted" style="font-size:0.78rem;">Use the preloaded demo account or your own login.</p>
+            </div>
+            <span class="demo-chip"><i class="fas fa-wand-magic-sparkles me-1"></i>One-click fill</span>
+          </div>
+          <div class="d-grid gap-2">
+            <button type="button" class="btn btn-outline-primary btn-sm demo-fill" data-email="customer@example.com" data-password="Customer@123">
+              <i class="fas fa-user me-2"></i>Use Customer Demo
+            </button>
+            <a href="/login" class="btn btn-outline-secondary btn-sm">
+              <i class="fas fa-user-shield me-2"></i>Go to Admin Login
+            </a>
+          </div>
+        </div>
+
         <form action="/customer/login" method="post">
           <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
           <div class="mb-3">
             <label class="form-label">Email Address</label>
             <div class="input-group">
               <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-              <input type="email" name="email" class="form-control" placeholder="your@email.com" required autofocus>
+              <input type="email" name="email" id="customer-email" class="form-control" placeholder="your@email.com" required autofocus>
             </div>
           </div>
           <div class="mb-4">
             <label class="form-label">Password</label>
             <div class="input-group">
               <span class="input-group-text"><i class="fas fa-lock"></i></span>
-              <input type="password" name="password" class="form-control" placeholder="Enter password" required>
+              <input type="password" name="password" id="customer-password" class="form-control" placeholder="Enter password" required>
             </div>
           </div>
           <button type="submit" class="btn btn-primary w-100 py-2">
@@ -43,4 +61,20 @@
     </div>
   </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.demo-fill').forEach((button) => {
+    button.addEventListener('click', function () {
+      const emailInput = document.getElementById('customer-email');
+      const passwordInput = document.getElementById('customer-password');
+      emailInput.value = this.dataset.email || '';
+      passwordInput.value = this.dataset.password || '';
+      emailInput.focus();
+    });
+  });
+});
+</script>
 {% endblock %}

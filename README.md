@@ -3,9 +3,7 @@
 <div align="center">
 
 <!-- Animated typing effect -->
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00D4FF&center=true&vCenter=true&width=700&lines=Full-Stack+Flask+Pharmacy+System+🏥;Role-Based+Admin+%26+Customer+Portals+🔐;Live+on+Vercel+%2B+Neon+PostgreSQL+🚀;Chart-Driven+Analytics+%26+Reports+📊" alt="Typing SVG" />
-</a>
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=20&pause=1000&color=00D4FF&center=true&vCenter=true&multiline=false&width=750&height=50&lines=Full-Stack+Flask+Pharmacy+System;Role-Based+Admin+%26+Customer+Portals;Live+on+Vercel+%2B+Neon+PostgreSQL;Chart-Driven+Analytics+%26+Reports" alt="Typing SVG" />
 
 <br/>
 

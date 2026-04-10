@@ -102,6 +102,7 @@
 </div>
 {% endblock %}
 
+{% block extra_js %}
 <script>
 const MEDICINES = {{ medicines_list | map(attribute='medicine') | list | tojson }};
 const PRODUCTS  = {{ products_list  | map(attribute='product')  | list | tojson }};
@@ -147,3 +148,4 @@ function setupTagAutocomplete(inputId, dropdownId, allItems) {
 setupTagAutocomplete('cust-medicines', 'cust-medicines-ac', MEDICINES);
 setupTagAutocomplete('cust-products',  'cust-products-ac',  PRODUCTS);
 </script>
+{% endblock %}
