@@ -322,6 +322,6 @@ Open 👉 **http://localhost:5000**
 
 <div align="center">
 
-*Built with ❤️ using Flask • SQLAlchemy • Bootstrap • Neon PostgreSQL • Vercel*
+*Built with using Flask • SQLAlchemy • Bootstrap • Neon PostgreSQL • Vercel*
 
 </div>
